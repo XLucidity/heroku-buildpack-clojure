@@ -4,6 +4,8 @@
 # fail fast
 set -e
 
+echo "BUILD_COMMAND=$BUILD_COMMAND"
+
 # parse args
 export BUILD_DIR=$1
 export CACHE_DIR=$2
