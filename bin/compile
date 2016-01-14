@@ -4,8 +4,6 @@
 # fail fast
 set -e
 
-echo "BUILD_COMMAND=$BUILD_COMMAND"
-
 # parse args
 export BUILD_DIR=$1
 export CACHE_DIR=$2
@@ -131,6 +129,8 @@ if [ "$BUILD_COMMAND" = "" ]; then
         BUILD_COMMAND="lein $LEIN_BUILD_TASK"
     fi
 fi
+
+BUILD_COMMAND=bin/build
 
 echo "       Running: $BUILD_COMMAND"
 
